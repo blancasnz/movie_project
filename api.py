@@ -10,10 +10,6 @@ movies = [
     {
         'title': 'Harry Potter',
         'year': 2000
-    },
-    {
-        'title': 'Swiss Army Man',
-        'year': 2017
     }
 ]
 
