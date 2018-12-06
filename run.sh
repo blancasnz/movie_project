@@ -1,1 +1,2 @@
-FLASK_APP=app.py flask run
+source .env
+FLASK_APP=api.py flask run
