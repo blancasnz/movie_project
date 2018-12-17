@@ -38,7 +38,3 @@ def search(query):
         movies.append(Movie(film['id'], film['title'], film['release_date']))
 
     return movies
-
-
-output = search('die hard')
-print(output[:5])
