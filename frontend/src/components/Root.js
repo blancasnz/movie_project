@@ -6,7 +6,7 @@ import { fetchMovies } from "../reducers/movies";
 
 class App extends Component {
   componentDidMount() {
-    // const movieThunk = fetchMovies();
+    const movieThunk = fetchMovies();
     // store.dispatch(movieThunk);
     //     axios
     //       .get("/api/v1/search", {

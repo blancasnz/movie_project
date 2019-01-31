@@ -18,14 +18,14 @@ export default function reducer(movies = [], action) {
 }
 
 //THUNK CREATORS
-export const fetchMovies = () => dispatch => {
+export const fetchMovies = () => {
   axios
     .get("/api/v1/search", {
       params: {
         query: "Harry Potter"
       }
     })
-    .then(res => dispatch(init(res.data)))
+    // .then(res => dispatch(init(res.data)))
     .then(res => console.log(res.data))
-    .catch(err => console.error("Oh No! Could not find Campuses!", err));
+    .catch(err => console.error("Oh No! Could not find Movies!", err));
 };
