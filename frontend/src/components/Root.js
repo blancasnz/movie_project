@@ -1,13 +1,13 @@
 import React, { Component } from "react";
 // import logo from "./logo.svg";
-import store from "../store";
-import "./App.css";
+// import store from "../store";
+import "../App.css";
 import { fetchMovies } from "../reducers/movies";
 
 class App extends Component {
   componentDidMount() {
-    const movieThunk = fetchMovies();
-    store.dispatch(movieThunk);
+    // const movieThunk = fetchMovies();
+    // store.dispatch(movieThunk);
     //     axios
     //       .get("/api/v1/search", {
     //         params: {
