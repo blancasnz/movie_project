@@ -35,7 +35,6 @@ def search(query):
     output = json.loads(response.text)
     movies = []
     for film in output['results']:
-        print('FILM', film)
         if 'title' not in film:
             continue
         movies.append(Movie(film['id'], film['title'], film['release_date']))
