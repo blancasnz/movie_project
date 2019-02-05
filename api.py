@@ -1,5 +1,5 @@
 from flask import jsonify, abort, request
-from models import Book, book_schema, books_schema
+# from models import Book, book_schema, books_schema
 from app import app, db
 from movie_db import search
 
@@ -12,6 +12,23 @@ def get_results():
     for movie in movies:
         movie_response.append(movie.to_dictionary())
     return jsonify(movie_response)
+
+
+@app.route("/api/v1/profile", methods=['GET'])
+def get_profile():
+    reviews = [
+        {
+            'image': 'IMG_2196.JPG',
+            'review_text': 'It was aight',
+            'rating': '3 stars'
+        },
+        {
+            'image': 'IMG_2196.JPG',
+            'review_text': 'I loved it',
+            'rating': '5 stars'
+        }
+    ]
+    return jsonify(reviews)
 
 
 # @app.route("/api/movie", methods=['POST'])
