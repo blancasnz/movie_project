@@ -1,27 +1,18 @@
-from app import db, ma
+from app import db
 
 
-class Book(db.Model):
+class User(db.Model):
+    _tablename_ = 'users'
+
     id = db.Column(db.Integer, primary_key=True)
-    title = db.Column(db.String(50), nullable=False)
-    author = db.Column(db.Integer)
+    name = db.Column(db.String(), nullable=False)
+    bio = db.Column(db.String(50))
+    email = db.Column(db.String(), nullable=False)
 
-    def __init__(self, title, author):
-        self.title = title
-        self.author = author
+    def __init__(self, name, bio, email):
+        self.name = name
+        self.bio = bio
+        self.email = email
 
-
-class BookSchema(ma.Schema):
-    class Meta:
-        fields = ('title', 'author')
-
-
-book_schema = BookSchema()
-books_schema = BookSchema(many=True)
-
-# returns a readable book, the syntax is string format, '%r' is a placeholder for the
-# book that will print and the '%' is saying format the self.title
-
-
-def __repr__(self):
-    return 'Book %r' % self.title
+    def __repr__(self):
+        return 'id {}'.format(self.id)

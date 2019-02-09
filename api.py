@@ -2,6 +2,7 @@ from flask import jsonify, abort, request
 # from models import Book, book_schema, books_schema
 from app import app, db
 from movie_db import search
+from models import User
 
 
 @app.route("/api/v1/search", methods=['GET'])
